@@ -1,0 +1,97 @@
+Útskýrðu stuttlega eftirfarandi hugtök og hvað þau gera:
+
+1. WebGL
+	WebGL stendur fyrir Web Graphics Library og er api-inn sem er notaðir fyrir 3D graphics í browser-um. Það notar canvas til að birta mynd og er byggt á OpenGL
+
+2. GPU
+	Graphics Proccessing Unit, er "Graphics accelerator". Þegar það er að vinna með 3D graphics er sent yfir öll objectin í GPU-ið og það vinnur með þá.
+
+3. Rasterizing
+	Það er að taka vector mynd og breyta því yfir í pixla mynd(raster mynd).
+
+4. GLSL
+	GLSL er forritunar tungumál sem er notað fyrir GPU-ið
+
+5. Vertex
+	Vertex punktur er punkturinn sem tvö strik mætast. Er notað sem hornin á þríhyrningum í WebGL
+
+6. Primative
+	Primative er hluturinn sem er notaður til að teikna í WebGL. Það tekur inn array af upplýsingum eða buffer-um sem segir honum hvernig til að teikna
+
+7. Fragment
+	Fragment shader-inn vinnur með að breyta co-ordinates í 2d og með hvaða lit hver pixill er
+
+8. Pixel
+	Er punktur á skjá, margir pixlar með öðruvísi liti geta gert mynd
+
+9. Clip space
+	Allt sem er ekki inn í view frustum er í clip space-inu. Það er ekki renderað og ekki hægt að vinna með
+
+10. View Frustrum
+	Allt sem þú sérð er í view frustrum-inu. Virkar eins og sýnissvið
+
+11. Z-Buffering
+	Þetta er það sem ákveður hvað sést á skjánum eða ekki. T.D. ef eitthvað er út úr view frustrum eða eitthvað er fyrir framan eitthvað object.
+
+12. Right-hand coordinate system (RHS)
+	Er system þegar z-ásinn er að þér og frá þér, y-ásinn er upp og niður og x ásinn er til hliðar. Þetta heitir Right-hand coordinate system vegna þess að þú getur sýnt hvernig það
+	virkar með hægri hend þinni.
+
+--------------------------------------
+
+Afhverju eru 3D objectar búnir til útfrá samsettum þríhyrningum í 3D grafík?
+
+Þríhyrningar eru notaðir vegna þess að það er hraðvirkt að vinna með þá, þegar þú ert búinn að búa til einn þríhyrning þarftu bara að bæti við einum punkt til að búa til annan þríhyrning.
+Það er líka vegna þess að þeir eru alltaf "planar" semsagt að þeir eru aldrei á tvemur "planes" í einu
+--------------------------------------
+
+Útskýrðu ítarlega og tæknilega (en án kóða) með eigin orðum ásmt skýringamyndum hvernig rendering pipeline virkar í WebGL.
+
+Pipeline-ið er eins og vinnulína í fyrirtæki, það er farið með mörg object í gegnum skref af byggingu. í WebGL byrjar það með því að senda objectið í GPU-ið, vanalega 3D þríhyrninga.
+Skref 2 er breytt þessum 3D þríhyrningum með camera og model transform sem er látt á objectið. Ef objectið er ekki inn í camera þá er hætt að vinna með hann og hann er tekinn út.
+Skref 3 er ef partur af hlutinum er af skjánum þá er hann klipptur, þríhyrningurinn sem er út er breyttur í fleiri minni þríhyrninga
+
+--------------------------------------
+
+Transform(translation, rotation	og scale). Komdu með sýnidæmi með vector/vigri) í cartesian hnitakerfi (x,y,z) fyrir:
+a) translation	
+	Translation er það sem þú gerir er að þú tekur upprunalega matrixið og leggur hann saman við vigurinn sem þú villt færa með.
+        til dæmis:
+          Færðu matrixið 3 skref x, 2 skref y og -2 skref í z
+          matrixið = |1 1 1|
+                     |1 -1 1|
+                     |2 0 2|
+
+                     |(1+3) (1+3) (1+3)|             |4  4  4|
+        nýamatrixið= |(1+2) (1+2) (1+2)|  sem væri = |3  3  3|
+                     |(2-2) (0-2) (2-2)|             |0 -2  0|
+b) rotation	
+	Rotation er þegar þú snýrð vigrinum sem þú ert að vinna með eitthverja ákveðna gráðu, eins og ef þú villt snúa 3d vigri um 90° þá
+        þarftu að byrja á því að snúa i-hat, j-hat og k -hat vigrunum um 90° af því þegar þú ert búinn að því þá geturu hreinlega
+        bara margfaldað vigurinn sem þú ert með með þessu matrixi sem þú færð út þegar þ ú rotatar i-hat, j-hat og k-hat.
+        til dæmis:
+            snúðu vigrunum [2 3 1] og [3 2 7] um 90° counterclockwise.
+            1. snúa i-hat, j-hat og k-hat um 90° counterclockwise
+                i-hat = [0 1 0], j-hat = [-1 0 0] k-hat = [0 0 1]
+            2. margfalda vigrana með höttunum.
+                2 x [0 1 0]                 3 x [0 1 0]
+                3 x [-1 0 0]                2 x [-1 0 0]
+                1 x [0 0 1]                 7 x [0 0 1]
+
+                [-3 2 1]                    [-2 3 7]
+
+
+            svar: vigurinn [2 3 1] rotateaður um 90° counterclockwise yrði þá að vigrinum [-3 2 1]
+            og vigurinn [3 2 7] yrði þá að [-2 3 7]
+
+c) scale
+	Scale er þegar þú breytir vectorinum með því að margfalda hann með einhverri tölu til að hann stækki.
+	Til að hækka um 3 margfaldaru með 3 inn í vectorinn
+
+--------------------------------------
+
+
+Fylki(e.matrix). Sýndu með sýnidæmi hvernig 4x4 fylki vigri/vector er reiknaður með:
+a) translation matrix
+b) rotation matrix
+c) scale matrix
