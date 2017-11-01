@@ -1,79 +1,87 @@
-Útskırğu stuttlega eftirfarandi hugtök og hvağ şau gera:
+ÃštskÃ½rÃ°u stuttlega eftirfarandi hugtÃ¶k og hvaÃ° Ã¾au gera:
 
 1. WebGL
-	WebGL stendur fyrir Web Graphics Library og er api-inn sem er notağir fyrir 3D graphics í browser-um. Şağ notar canvas til ağ birta mynd og er byggt á OpenGL
+	WebGL stendur fyrir Web Graphics Library og er api-inn sem er notaÃ°ir fyrir 3D graphics Ã­ browser-um. ÃaÃ° notar canvas til aÃ° birta mynd og er byggt Ã¡ OpenGL
 
 2. GPU
-	Graphics Proccessing Unit, er "Graphics accelerator". Şegar şağ er ağ vinna meğ 3D graphics er sent yfir öll objectin í GPU-iğ og şağ vinnur meğ şá.
+	Graphics Proccessing Unit, er "Graphics accelerator". Ãegar Ã¾aÃ° er aÃ° vinna meÃ° 3D graphics er sent yfir Ã¶ll objectin Ã­ GPU-iÃ° og Ã¾aÃ° vinnur meÃ° Ã¾Ã¡.
 
 3. Rasterizing
-	Şağ er ağ taka vector mynd og breyta şví yfir í pixla mynd(raster mynd).
+	ÃaÃ° er aÃ° taka vector mynd og breyta Ã¾vÃ­ yfir Ã­ pixla mynd(raster mynd).
 
 4. GLSL
-	GLSL er forritunar tungumál sem er notağ fyrir GPU-iğ
+	GLSL er forritunar tungumÃ¡l sem er notaÃ° fyrir GPU-iÃ°
 
 5. Vertex
-	Vertex punktur er punkturinn sem tvö strik mætast. Er notağ sem hornin á şríhyrningum í WebGL
+	Vertex punktur er punkturinn sem tvÃ¶ strik mÃ¦tast. Er notaÃ° sem hornin Ã¡ Ã¾rÃ­hyrningum Ã­ WebGL
 
 6. Primative
-	Primative er hluturinn sem er notağur til ağ teikna í WebGL. Şağ tekur inn array af upplısingum eğa buffer-um sem segir honum hvernig til ağ teikna
+	Primative er hluturinn sem er notaÃ°ur til aÃ° teikna Ã­ WebGL. ÃaÃ° tekur inn array af upplÃ½singum eÃ°a buffer-um sem segir honum hvernig til aÃ° teikna
 
 7. Fragment
-	Fragment shader-inn vinnur meğ ağ breyta co-ordinates í 2d og meğ hvağa lit hver pixill er
+	Fragment shader-inn vinnur meÃ° aÃ° breyta co-ordinates Ã­ 2d og meÃ° hvaÃ°a lit hver pixill er
 
 8. Pixel
-	Er punktur á skjá, margir pixlar meğ öğruvísi liti geta gert mynd
+	Er punktur Ã¡ skjÃ¡, margir pixlar meÃ° Ã¶Ã°ruvÃ­si liti geta gert mynd
 
 9. Clip space
-	Allt sem er ekki inn í view frustum er í clip space-inu. Şağ er ekki renderağ og ekki hægt ağ vinna meğ
+	Allt sem er ekki inn Ã­ view frustum er Ã­ clip space-inu. ÃaÃ° er ekki renderaÃ° og ekki hÃ¦gt aÃ° vinna meÃ°
 
 10. View Frustrum
-	Allt sem şú sérğ er í view frustrum-inu. Virkar eins og sınissviğ
+	Allt sem Ã¾Ãº sÃ©rÃ° er Ã­ view frustrum-inu. Virkar eins og sÃ½nissviÃ°
 
 11. Z-Buffering
-	Şetta er şağ sem ákveğur hvağ sést á skjánum eğa ekki. T.D. ef eitthvağ er út úr view frustrum eğa eitthvağ er fyrir framan eitthvağ object.
+	Ãetta er Ã¾aÃ° sem Ã¡kveÃ°ur hvaÃ° sÃ©st Ã¡ skjÃ¡num eÃ°a ekki. T.D. ef eitthvaÃ° er Ãºt Ãºr view frustrum eÃ°a eitthvaÃ° er fyrir framan eitthvaÃ° object.
 
 12. Right-hand coordinate system (RHS)
-	Er system şegar z-ásinn er ağ şér og frá şér, y-ásinn er upp og niğur og x ásinn er til hliğar. Şetta heitir Right-hand coordinate system vegna şess ağ şú getur sınt hvernig şağ
-	virkar meğ hægri hend şinni.
+	Er system Ã¾egar z-Ã¡sinn er aÃ° Ã¾Ã©r og frÃ¡ Ã¾Ã©r, y-Ã¡sinn er upp og niÃ°ur og x Ã¡sinn er til hliÃ°ar. Ãetta heitir Right-hand coordinate system vegna Ã¾ess aÃ° Ã¾Ãº getur sÃ½nt hvernig Ã¾aÃ°
+	virkar meÃ° hÃ¦gri hend Ã¾inni.
 
 --------------------------------------
 
-Afhverju eru 3D objectar búnir til útfrá samsettum şríhyrningum í 3D grafík?
+Afhverju eru 3D objectar bÃºnir til ÃºtfrÃ¡ samsettum Ã¾rÃ­hyrningum Ã­ 3D grafÃ­k?
 
-Şríhyrningar eru notağir vegna şess ağ şağ er hrağvirkt ağ vinna meğ şá, şegar şú ert búinn ağ búa til einn şríhyrning şarftu bara ağ bæti viğ einum punkt til ağ búa til annan şríhyrning.
-Şağ er líka vegna şess ağ şeir eru alltaf "planar" semsagt ağ şeir eru aldrei á tvemur "planes" í einu
+ÃrÃ­hyrningar eru notaÃ°ir vegna Ã¾ess aÃ° Ã¾aÃ° er hraÃ°virkt aÃ° vinna meÃ° Ã¾Ã¡, Ã¾egar Ã¾Ãº ert bÃºinn aÃ° bÃºa til einn Ã¾rÃ­hyrning Ã¾arftu bara aÃ° bÃ¦ti viÃ° einum punkt til aÃ° bÃºa til annan Ã¾rÃ­hyrning.
+ÃaÃ° er lÃ­ka vegna Ã¾ess aÃ° Ã¾eir eru alltaf "planar" semsagt aÃ° Ã¾eir eru aldrei Ã¡ tvemur "planes" Ã­ einu
 --------------------------------------
 
-Útskırğu ítarlega og tæknilega (en án kóğa) meğ eigin orğum ásmt skıringamyndum hvernig rendering pipeline virkar í WebGL.
+ÃštskÃ½rÃ°u Ã­tarlega og tÃ¦knilega (en Ã¡n kÃ³Ã°a) meÃ° eigin orÃ°um Ã¡smt skÃ½ringamyndum hvernig rendering pipeline virkar Ã­ WebGL.
 
-Pipeline-iğ er eins og vinnulína í fyrirtæki, şağ er fariğ meğ mörg object í gegnum skref af byggingu. í WebGL byrjar şağ meğ şví ağ senda objectiğ í GPU-iğ, vanalega 3D şríhyrninga.
-Skref 2 er breytt şessum 3D şríhyrningum meğ camera og model transform sem er látt á objectiğ. Ef objectiğ er ekki inn í camera şá er hætt ağ vinna meğ hann og hann er tekinn út.
-Skref 3 er ef partur af hlutinum er af skjánum şá er hann klipptur, şríhyrningurinn sem er út er breyttur í fleiri minni şríhyrninga
+Pipeline-iÃ° er eins og vinnulÃ­na Ã­ fyrirtÃ¦ki, Ã¾aÃ° er fariÃ° meÃ° mÃ¶rg object Ã­ gegnum skref af byggingu. Ã­ WebGL byrjar Ã¾aÃ° meÃ° Ã¾vÃ­ aÃ° senda objectiÃ° Ã­ GPU-iÃ°, vanalega 3D Ã¾rÃ­hyrninga.
+Skref 2 er breytt Ã¾essum 3D Ã¾rÃ­hyrningum meÃ° camera og model transform sem er lÃ¡tt Ã¡ objectiÃ°. Ef objectiÃ° er ekki inn Ã­ camera Ã¾Ã¡ er hÃ¦tt aÃ° vinna meÃ° hann og hann er tekinn Ãºt.
+Skref 3 er ef partur af hlutinum er af skjÃ¡num Ã¾Ã¡ er hann klipptur, Ã¾rÃ­hyrningurinn sem er Ãºt er breyttur Ã­ fleiri minni Ã¾rÃ­hyrninga
+------LagaÃ° meÃ° betri ÃºtskÃ½ringu------
+
+Fyrst Ã­ Javascript bÃºum viÃ° til arrays sem halda utan um allt efniÃ°, bÃºum til buffers, shaders osfv.
+NÃ¦sta skref Ã¾Ã¡ keyrum viÃ° draw functions sem tekur inn upplÃ½singarnar Ãºr array-inu og vertex shader-inn keyrir fyrir hvern hlut Ã­ vertex bufferinum. ÃaÃ° reiknar staÃ°setninguna Ã¡ Ã¶llum hlutunum og greinir hvaÃ°a attributes model-iÃ° hefur.
+Ã primitive assembly tekur Ã¾aÃ° upplÃ½singarnar um staÃ°setningarnar og leggur Ã¾Ã¦r saman en teiknar Ã¾Ã¦r ekki upp og gefur Ã¾essar upplÃ½singar til rezterizer.
+Ã razterization er loksins byrjaÃ° aÃ° teikna upp myndina, hÃ©r er sÃ©Ã° hvaÃ°a Ã¾rÃ­hyrninga mun ekki sjÃ¡st Ã­ og kastaÃ° Ã¾eim Ãºt, Ã¾etta er kallaÃ° "culling" og Ã¾eir kasta Ãºt lÃ­ka Ã¾rÃ­hyrningum sem eru fyrir utan view area-iÃ°, ef hann er bara smÃ¡ Ãºt Ã¾Ã¡ er kastaÃ° parinum sem er Ãºt Ãºr og hitt er breytt Ã­ fleiri minni Ã¾rÃ­hyrninga.
+Ãetta fer svo Ã­ fragment shader-inn Ã¾ar sem Ã¾ar er gefiÃ° hverjum einum pixill lit, Ã¾annig aÃ° Ã¾aÃ° getur gert mynd.
+Ã frame buffer-inum er geymt upplÃ½singar um hÃ¦Ã° og breidd hlutsins, lit af hverjum pixill osfv.
 
 --------------------------------------
 
-Transform(translation, rotation	og scale). Komdu meğ sınidæmi meğ vector/vigri) í cartesian hnitakerfi (x,y,z) fyrir:
+Transform(translation, rotation	og scale). Komdu meÃ° sÃ½nidÃ¦mi meÃ° vector/vigri) Ã­ cartesian hnitakerfi (x,y,z) fyrir:
 a) translation	
-	Translation er şağ sem şú gerir er ağ şú tekur upprunalega matrixiğ og leggur hann saman viğ vigurinn sem şú villt færa meğ.
-        til dæmis:
-          Færğu matrixiğ 3 skref x, 2 skref y og -2 skref í z
-          matrixiğ = |1 1 1|
+	Translation er Ã¾aÃ° sem Ã¾Ãº gerir er aÃ° Ã¾Ãº tekur upprunalega matrixiÃ° og leggur hann saman viÃ° vigurinn sem Ã¾Ãº villt fÃ¦ra meÃ°.
+        til dÃ¦mis:
+          FÃ¦rÃ°u matrixiÃ° 3 skref x, 2 skref y og -2 skref Ã­ z
+          matrixiÃ° = |1 1 1|
                      |1 -1 1|
                      |2 0 2|
 
                      |(1+3) (1+3) (1+3)|             |4  4  4|
-        nıamatrixiğ= |(1+2) (1+2) (1+2)|  sem væri = |3  3  3|
+        nÃ½amatrixiÃ°= |(1+2) (1+2) (1+2)|  sem vÃ¦ri = |3  3  3|
                      |(2-2) (0-2) (2-2)|             |0 -2  0|
 b) rotation	
-	Rotation er şegar şú snırğ vigrinum sem şú ert ağ vinna meğ eitthverja ákveğna gráğu, eins og ef şú villt snúa 3d vigri um 90° şá
-        şarftu ağ byrja á şví ağ snúa i-hat, j-hat og k -hat vigrunum um 90° af şví şegar şú ert búinn ağ şví şá geturu hreinlega
-        bara margfaldağ vigurinn sem şú ert meğ meğ şessu matrixi sem şú færğ út şegar ş ú rotatar i-hat, j-hat og k-hat.
-        til dæmis:
-            snúğu vigrunum [2 3 1] og [3 2 7] um 90° counterclockwise.
-            1. snúa i-hat, j-hat og k-hat um 90° counterclockwise
+	Rotation er Ã¾egar Ã¾Ãº snÃ½rÃ° vigrinum sem Ã¾Ãº ert aÃ° vinna meÃ° eitthverja Ã¡kveÃ°na grÃ¡Ã°u, eins og ef Ã¾Ãº villt snÃºa 3d vigri um 90Â° Ã¾Ã¡
+        Ã¾arftu aÃ° byrja Ã¡ Ã¾vÃ­ aÃ° snÃºa i-hat, j-hat og k -hat vigrunum um 90Â° af Ã¾vÃ­ Ã¾egar Ã¾Ãº ert bÃºinn aÃ° Ã¾vÃ­ Ã¾Ã¡ geturu hreinlega
+        bara margfaldaÃ° vigurinn sem Ã¾Ãº ert meÃ° meÃ° Ã¾essu matrixi sem Ã¾Ãº fÃ¦rÃ° Ãºt Ã¾egar Ã¾ Ãº rotatar i-hat, j-hat og k-hat.
+        til dÃ¦mis:
+            snÃºÃ°u vigrunum [2 3 1] og [3 2 7] um 90Â° counterclockwise.
+            1. snÃºa i-hat, j-hat og k-hat um 90Â° counterclockwise
                 i-hat = [0 1 0], j-hat = [-1 0 0] k-hat = [0 0 1]
-            2. margfalda vigrana meğ höttunum.
+            2. margfalda vigrana meÃ° hÃ¶ttunum.
                 2 x [0 1 0]                 3 x [0 1 0]
                 3 x [-1 0 0]                2 x [-1 0 0]
                 1 x [0 0 1]                 7 x [0 0 1]
@@ -81,17 +89,17 @@ b) rotation
                 [-3 2 1]                    [-2 3 7]
 
 
-            svar: vigurinn [2 3 1] rotateağur um 90° counterclockwise yrği şá ağ vigrinum [-3 2 1]
-            og vigurinn [3 2 7] yrği şá ağ [-2 3 7]
+            svar: vigurinn [2 3 1] rotateaÃ°ur um 90Â° counterclockwise yrÃ°i Ã¾Ã¡ aÃ° vigrinum [-3 2 1]
+            og vigurinn [3 2 7] yrÃ°i Ã¾Ã¡ aÃ° [-2 3 7]
 
 c) scale
-	Scale er şegar şú breytir vectorinum meğ şví ağ margfalda hann meğ einhverri tölu til ağ hann stækki.
-	Til ağ hækka um 3 margfaldaru meğ 3 inn í vectorinn
+	Scale er Ã¾egar Ã¾Ãº breytir vectorinum meÃ° Ã¾vÃ­ aÃ° margfalda hann meÃ° einhverri tÃ¶lu til aÃ° hann stÃ¦kki.
+	Til aÃ° hÃ¦kka um 3 margfaldaru meÃ° 3 inn Ã­ vectorinn
 
 --------------------------------------
 
 
-Fylki(e.matrix). Sındu meğ sınidæmi hvernig 4x4 fylki vigri/vector er reiknağur meğ:
+Fylki(e.matrix). SÃ½ndu meÃ° sÃ½nidÃ¦mi hvernig 4x4 fylki vigri/vector er reiknaÃ°ur meÃ°:
 a) translation matrix
 b) rotation matrix
 c) scale matrix
