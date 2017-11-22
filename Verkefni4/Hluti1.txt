@@ -1,0 +1,11 @@
+1. Hvað er notendaupplifin (e. UX) og notendaviðmót (e. UI), Hver er munurinn á þeim og hvernig nýtast þessi svið í viðmóstþróun og í viðmótsforritun?
+
+Notendaupplifunin er um hversu þægilegt það er fyrir notandann að nota vöruna eða vefsíðuna, með því að láta það lættar og þægilegra að nota.
+Notendaupplifun fjallar ekki bara um hluti á vefinum, flest allar vörur hafa einhverjar notendaupplifunar hugsanir á bakvið þeim.
+Notendaviðmót er hvernig vefsíður líta út, ef það er þægilegt að líta á þær, ef það er þægilegt að nota vefsíðuna, hversu vel allt virkar á henni og
+hversu einfalt er fyrir notandann að horfa á síðuna og skilja strax hvernig til að nota hana. 
+
+Munurinn á þeim er að UI er læst í að vinna í vörunni sem þú ert að gera á meðan UX er að reyna vinna með notandanum af vörunni.
+Það er erfitt að bera þeim saman vegna þess að þau eru ekki sömu hlutir, þeir vinna bara saman oft.
+
+Þessi svið notast í viðmótsforritun þegar það er að plana upplifun fyrir notendur, það fer fyrst í gegnum UX plönun og frá því er búið til UI-ið til að vinna með þessum hugsunum
